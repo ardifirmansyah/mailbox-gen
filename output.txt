@@ -1,0 +1,9 @@
+Set-MsolUser -UserPrincipalName ardifirmansyah30@gmail.com -UsageLocation ID
+============
+Set-MsolUserLicense -UserPrincipalName ardifirmansyah30@gmail.com -addLicenses astrainternational:DESKLESSPACK
+============
+Enable-RemoteMailbox ardifirmansyah30@gmail.com -RemoteRoutingAddress ardifirmansyah30@astrainternational.onmicrosoft.com -PrimarySMTPAddress ardifirmansyah30@gmail.com
+============
+Get-Mailbox ardifirmansyah30@gmail.com | Set-CASMailbox -PopUseProtocolDefaults $false
+Get-Mailbox ardifirmansyah30@astrainternational.onmicrosoft.com | Set-CASMailbox -PopForceICalForCalendarRetrievalOption $true
+============
